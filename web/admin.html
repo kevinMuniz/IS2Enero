@@ -1,0 +1,949 @@
+<html>
+    <head>       
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administrador - Peces de Interes Comercial</title>    
+    <meta name="author" content="kevinmuniz@mobilemonkeys.com">
+    
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/logo.png" >
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+    <!-- Slider
+    ================================================== -->
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <body onload="empezarDetener(),comboFamilia(),comboOrden(),comboClase(),comboPais(),comboProcesamiento(),comboEmpaque(),comboPorcion(),comboUso(),comboPreparacion()">
+        
+    <!-- Navigation
+    ==========================================-->
+    <!--nav id="tf-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!--div class="navbar-header"-->
+                             
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">       
+      <div class="container">   
+        <div class="navbar-header">
+            
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" style href="#tf-works">Inicio</a>           
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><div class="crono_wrapper">
+                    <h3 id='crono'>00:00:00</h3>
+                </div></li>            
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+    <!-- Portfolio Section
+    ==========================================-->
+    <div id="tf-works">
+        <div class="container"> <!-- Container -->
+            <div class="section-title text-center center">
+                <h2>Alimentacion de la Base de Datos de <strong>Especies de Interes Comercial</strong></h2>
+                <div class="line">
+                    <hr>
+                </div>
+                <div class="clearfix"></div>
+                <small><em>Pensado en la creación de una base de conocimientos sobre las Especies de interes de Comercial para los puertos de la Zona costera de Ecuador.</em></small>
+            </div>
+            <div class="space"></div>          
+
+            <div id="lightbox" class="row">
+
+                <div class="col-sm-6 col-md-3 col-lg-3 branding">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-familia">
+                                <div class="hover-text">
+                                    <h4>Familia</h4>                                    
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/01.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3 photography app">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-orden">
+                                <div class="hover-text">
+                                    <h4>Orden</h4>                                    
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/02.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3 branding">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-clase">
+                                <div class="hover-text">
+                                    <h4>Clase</h4>                                    
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/03.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3 branding">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-pais">
+                                <div class="hover-text">
+                                    <h4>Pais</h4>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/04.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3 web">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-procesamiento">
+                                <div class="hover-text">
+                                    <h4>Procesamiento</h4>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/05.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3 app">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-preparacion">
+                                <div class="hover-text">
+                                    <h4>Preparación</h4>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/06.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3 photography web">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-uso">
+                                <div class="hover-text">
+                                    <h4>Uso</h4>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/07.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3 web">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-empaque">
+                                <div class="hover-text">
+                                    <h4>Empaque</h4>                                    
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/08.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 col-lg-3 app">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-porcion">
+                                <div class="hover-text">
+                                    <h4>Porcion</h4>                                    
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/09.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-md-3 col-lg-3 app">
+                    <div class="portfolio-item">
+                        <div class="hover-bg">
+                            <a href="#tf-especie">
+                                <div class="hover-text">
+                                    <h4>Especie</h4>                                    
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="img/portfolio/10.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+            
+    <!---seccion Familia
+    ======--->
+    <div id="tf-familia" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Familia de Peces</span></strong></h1>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nombre de Familia </label>
+                            <input  type="text" class="form-control" id="inputNombreFamilia" placeholder="Ingresar familia">
+                        </div>
+                    </div>                        
+                </div>                                            
+                <button type="button" class="btn tf-btn btn-default" id="btnFamilia" onclick="serviceFamilia()">Guardar familia</button>                
+            </form>
+        </div>
+    </div>
+    <div id="prueba"></div>
+
+    <!---seccion Orden
+    ======--->
+    <div id="tf-orden" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Orden de Peces</span></strong></h1>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nombre de Order </label>
+                            <input type="text" class="form-control" id="inputNombreOrden" placeholder="Ingresar orden">
+                        </div>
+                    </div>                        
+                </div>                                            
+                <button type="button" class="btn tf-btn btn-default" id="btnOrden" onclick="serviceOrden()">Guardar orden</button>
+            </form>
+        </div>
+    </div>
+    
+    <!---seccion Clase
+    ======--->
+    <div id="tf-clase" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Clase de Peces</span></strong></h1>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nombre Clase</label>
+                            <input  type="text" class="form-control" id="inputNombreClase" placeholder="Ingresar clase ">
+                        </div>
+                    </div>                        
+                </div>                                            
+                <button type="button" class="btn tf-btn btn-default" id="btnClase" onclick="serviceClase()">Guardar clase</button>
+            </form>
+        </div>
+    </div>
+    
+    <!---seccion Pais
+    ======--->
+    <div id="tf-pais" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Paises</span></strong></h1>
+             <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nombre de Pais </label>
+                                    <input  type="text" class="form-control" id="inputNombrePais" placeholder="Ingresar Nombre pais">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Código de Pais </label>
+                                    <input  type="text" class="form-control" id="inputCodigoPais" placeholder="ECU">
+                                </div>
+                            </div>
+                        </div>                        
+                        
+                 <button type="button" class="btn tf-btn btn-default" id="btnPais" onclick="servicePais()">Guardar pais</button>
+            </form>
+        </div>
+    </div>
+    
+    <!---seccion Procesamiento
+    ======--->
+    <div id="tf-procesamiento" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Procesamiento de Peces</span></strong></h1>
+            <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nombre de Procesamiento</label>
+                                    <input  type="text" class="form-control" id="inputNombreProcesmiento" placeholder="Ingresar Procesamiento">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Descripción</label>
+                                    <input  type="text" class="form-control" id="inputDescripcionProcesamiento" placeholder="Remove the skin...">
+                                </div>
+                            </div>
+                        </div>                        
+                        
+                <button type="button" class="btn tf-btn btn-default" id="btnProcesamiento" onclick="serviceProcesamiento()">Guardar Procesamiento</button>
+            </form>
+        </div>
+    </div>
+    
+    <!---seccion Preparacion
+    ======--->
+    <div id="tf-preparacion" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Preparación de Peces</span></strong></h1>
+            <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nombre de Preparación</label>
+                                    <input  type="text" class="form-control" id="inputNombrePreparacion" placeholder="Ingresar Nombre Preparación">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Descripción</label>
+                                    <input  type="text" class="form-control" id="inputDescripcionPreparacion" placeholder="Fry on the griddle...">
+                                </div>
+                            </div>
+                        </div>                        
+                        
+                <button type="button" class="btn tf-btn btn-default" id="btnPreparacion" onclick="servicePreparacion()">Guardar Preparación</button>
+            </form>
+        </div>
+    </div>
+    
+    <!---seccion Uso
+    ======--->
+    <div id="tf-uso" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Uso de Peces</span></strong></h1>
+              <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nombre de Uso</label>
+                            <input  type="text" class="form-control" id="inputNombreUso" placeholder="Frozen">
+                        </div>
+                    </div>                        
+                </div>                                            
+                  <button type="button" class="btn tf-btn btn-default" id="btnUso" onclick="serviceUso()">Guardar Uso</button>
+            </form>
+        </div>
+    </div>
+    
+    <!---seccion Empaque
+    ======--->
+    <div id="tf-empaque" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Empaque</span></strong></h1>
+            <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nombre de Empaque</label>
+                                    <input  type="text" class="form-control" id="inputNombreEmpaque" placeholder="Ingresar Nombre Empaque">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Descripción</label>
+                                    <input  type="text" class="form-control" id="inputDescripcionEmpaque" placeholder="Vacuum packed...">
+                                </div>
+                            </div>
+                        </div>                        
+                        
+                <button type="button" class="btn tf-btn btn-default" id="btnEmpaque" onclick="serviceEmpaque()">Guardar Empaque</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <!---seccion Porcion
+    ======--->
+    <div id="tf-porcion" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Porcion de Peces</span></strong></h1> 
+            <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nombre de Porción</label>
+                                    <input  type="text" class="form-control" id="inputNombrePorcion" placeholder="Ingresar Nombre Porción">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Descripción</label>
+                                    <input  type="text" class="form-control" id="inputDescripcionPercion" placeholder="Skinless or boneless...">
+                                </div>
+                            </div>
+                        </div>                        
+                        
+                <button type="button" class="btn tf-btn btn-default" id="btnPorcion" onclick="servicePorcion()">Guardar Porción</button>
+            </form>
+            
+        </div>
+    </div>
+    
+    <!---seccion Especie
+    ======--->
+    <div id="tf-especie" class="text-center">
+        <div class="container">
+            <h1>Formulario de <strong><span class="color">Especie</span></strong></h1>
+            
+            <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nombre de Especie</label>
+                                    <input  type="text" class="form-control" id="inputNombreEspecie" placeholder="Nombre especie">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Familia</label>                                    
+                                    <div id="conmbof"></div>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Orden</label>
+                                    <!--<input  type="text" class="form-control" id="inputOrdenEspecie" placeholder="Perciformes">-->
+                                    <div id="conmboorden"></div>
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Clase</label>
+                                    <!--<input  type="text" class="form-control" id="inputClaseEspecie" placeholder="Actinopterygii">-->
+                                    <div id="conmboClase"></div>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Pais</label>
+                                    <!--<input  type="text" class="form-control" id="inputPaisEspecie" placeholder="Ecuador">-->
+                                    <div id="conmbopais"></div>
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Nombre comercial</label>
+                                    <input  type="text" class="form-control" id="inputNombreComercialEspecie" placeholder="Rabil">
+                                </div>
+                            </div>
+                            
+                            <br>
+                            
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Procesamiento</label>
+                                    <!--<input  type="text" class="form-control" id="inputProcesamientoEspecie" placeholder="Fresco y congelado">-->
+                                    <div id="conmboProcesamiento"></div>
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Empaque</label>
+                                    <!--<input  type="text" class="form-control" id="inputEmpaqueEspecie" placeholder="H & G">-->
+                                    <div id="conmboEmpaque"></div>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Porcion</label>
+                                    <!--<input  type="text" class="form-control" id="inputPorcionEspecie" placeholder="26 0 30 sin cabeza y espinas">-->
+                                    <div id="conmboPorcion"></div>
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Distribución</label>
+                                    <input  type="text" class="form-control" id="inputDistribucionEspecie" placeholder="Zona costera Manabí">
+                                </div>
+                            </div>
+                            
+                            <br>
+                            
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Habitad</label>
+                                    <input  type="text" class="form-control" id="inputHabitadEspecie" placeholder="Centro Sur oceano Pacifico">
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Talla</label>
+                                    <input  type="text" class="form-control" id="inputTallaEspecie" placeholder="80cm a 160cm">
+                                </div>
+                            </div>                            
+                               
+                
+                         <br>
+                            
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Uso</label>
+                                <!--<input  type="text" class="form-control" id="inputUsoEspecie" placeholder="Comercial">-->
+                                <div id="conmboUso"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Preparación</label>
+                                <!--<input  type="text" class="form-control" id="inputPreparacionEspecie" placeholder="Sushi">-->
+                                <div id="conmboPreparacion"></div>
+                            </div>
+                        </div>                            
+                         </div>    
+                <button type="button" class="btn tf-btn btn-default" id="btnEspecie" onclick="serviceEspecie()">Guardar Especie</button>                
+            </form>
+            <br>
+        </div>
+    </div>
+    
+     <nav id="footer">
+        <div class="container">
+            <div class="pull-left fnav">
+                <p>ALL RIGHTS RESERVED. COPYRIGHT © 2015. Designed and Coded by <a>Kevin Muñiz</a> &  <a>Mobile Monkeys</a></p>
+            </div>
+            <div class="pull-right fnav">
+                <ul class="footer-social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+    
+    <script>
+        var inicio=0;
+	var timeout=0;
+ 
+	function empezarDetener()
+	{
+            alert ("La sesión funcional solo dura 30 minutos");
+		if(timeout===0)
+		{			
+			// Obtenemos el valor actual
+			inicio=vuelta=new Date().getTime();
+ 
+			// iniciamos el proceso
+			funcionando();
+		}
+	}
+ 
+	function funcionando()
+	{
+		// obteneos la fecha actual
+		var actual = new Date().getTime();
+ 
+		// obtenemos la diferencia entre la fecha actual y la de inicio
+		var diff=new Date(actual-inicio);
+ 
+		// mostramos la diferencia entre la fecha actual y la inicial
+		var result=LeadingZero(diff.getUTCHours())+":"+LeadingZero(diff.getUTCMinutes())+":"+LeadingZero(diff.getUTCSeconds());
+		document.getElementById('crono').innerHTML = result;
+                
+                if (result === "00:30:00"){
+                    ($('#btnFamilia').prop( "disabled", true ));
+                    ($('#btnOrden').prop( "disabled", true ));
+                    ($('#btnClase').prop( "disabled", true ));
+                    ($('#btnPais').prop( "disabled", true ));
+                    ($('#btnProcesamiento').prop( "disabled", true ));
+                    ($('#btnPreparacion').prop( "disabled", true ));
+                    ($('#btnUso').prop( "disabled", true ));
+                    ($('#btnEmpaque').prop( "disabled", true ));
+                    ($('#btnPorcion').prop( "disabled", true ));
+                    ($('#btnEspecie').prop( "disabled", true ));
+                    alert("A partir de ahora sus cambios no se efectuaran");
+                };
+                
+		// Indicamos que se ejecute esta función nuevamente dentro de 1 segundo
+		timeout=setTimeout("funcionando()",1000);
+	}
+ 
+	/* Funcion que pone un 0 delante de un valor si es necesario */
+	function LeadingZero(Time) {
+		return (Time < 10) ? "0" + Time : + Time;
+	}
+    </script>
+    
+    <script>      
+        function serviceClase(){            
+            var nombre = ($("#inputNombreClase").val());
+            datos={"id":0,"nombre":nombre};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/clase",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });
+            ($("#inputNombreClase").val(""));
+        } 
+                
+        function serviceFamilia(){            
+            var nombref = ($("#inputNombreFamilia").val());
+            datos={"id":0,"nombre":nombref};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/familia",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });    
+            ($("#inputNombreFamilia").val(""));
+        }
+        
+        function serviceOrden(){            
+            var nombreo = ($("#inputNombreOrden").val());
+            datos={"id":0,"nombre":nombreo};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/orden",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });       
+            ($("#inputNombreOrden").val(""));
+        }   
+        
+        function servicePais(){            
+            var nombre = ($("#inputNombrePais").val());
+            var codigo = ($("#inputCodigoPais").val());
+            datos={"id":0,"nombre":nombre,"codigo":codigo};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/pais",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });  
+            ($("#inputNombrePais").val(""));
+            ($("#inputCodigoPais").val(""));
+        }
+         
+        function serviceProcesamiento(){            
+            var nombre = ($("#inputNombreProcesmiento").val());
+            var descripcion = ($("#inputDescripcionProcesamiento").val());
+            datos={"id":0,"nombre":nombre,"descripcion":descripcion};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/procesamiento",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });     
+            ($("#inputNombreProcesmiento").val(""));
+            ($("#inputDescripcionProcesamiento").val(""));
+        } 
+        
+        function servicePreparacion(){            
+            var nombre = ($("#inputNombrePreparacion").val());
+            var descripcion = ($("#inputDescripcionPreparacion").val());
+            datos={"id":0,"nombre":nombre,"descripcion":descripcion};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/preparacion",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });  
+            ($("#inputNombrePreparacion").val(""));
+            ($("#inputDescripcionPreparacion").val(""));
+        }
+        
+        function serviceUso(){            
+            var nombre = ($("#inputNombreUso").val());            
+            datos={"id":0,"nombre":nombre};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/uso",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });             
+            ($("#inputNombreUso").val(""));
+        }
+        
+        function serviceEmpaque(){            
+            var nombre = ($("#inputNombreEmpaque").val());
+            var descripcion = ($("#inputDescripcionEmpaque").val());
+            datos={"id":0,"nombre":nombre,"descripcion":descripcion};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/empaque",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                }); 
+            ($("#inputNombreEmpaque").val(""));
+            ($("#inputDescripcionEmpaque").val(""));
+        }
+        
+        function servicePorcion(){            
+            var nombre = ($("#inputNombrePorcion").val());
+            var descripcion = ($("#inputDescripcionPercion").val());
+            datos={"id":0,"nombre":nombre,"descripcion":descripcion};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/porcion",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });                    
+            ($("#inputNombrePorcion").val(""));
+            ($("#inputDescripcionPercion").val(""));
+        }
+        
+        function serviceEspecie(){            
+            var nombre = ($("#inputNombreEspecie").val());
+            var familia = ($("#inputFamiliaEspecie").val());            
+            var orden = ($("#inputOrdenEspecie").val());;
+            var clase = ($("#inputClaseEspecie").val());;
+            var paises = ($("#inputPaisEspecie").val());;
+            var nombreComercial = ($("#inputNombreComercialEspecie").val());;
+            var procesamientos = ($("#inputProcesamientoEspecie").val());;
+            var empaques = ($("#inputEmpaqueEspecie").val());;
+            var porcion = ($("#inputPorcionEspecie").val());;
+            var distribucion = ($("#inputDistribucionEspecie").val());;
+            var habitad = ($("#inputHabitadEspecie").val());;
+            var talla = ($("#inputTallaEspecie").val());;
+            var usos = ($("#inputUsoEspecie").val());;
+            var preparaciones = ($("#inputPreparacionEspecie").val());;                        
+            datos={"id":0,"nombre":nombre,"familia":familia,"orden":orden,"clase":clase,"paises":paises,"nombreComercial":nombreComercial,"procesamientos":procesamientos,"empaques":empaques,"porcion":porcion,"distribucion":distribucion,"habitad":habitad,"talla":talla,"usos":usos,"preparaciones":preparaciones};
+            $.ajax({                            
+                    type:"POST",
+                    url:"bd_peces/especie",
+                    dataType:"text",
+                    contentType:"application/json",
+                    data: JSON.stringify(datos)               
+                }).done(function(msg){
+                    alert(msg); 
+                });                    
+            ($("#inputNombreEspecie").val(""));
+            ($("#inputFamiliaEspecie").val(""));            
+            ($("#inputOrdenEspecie").val(""));
+            ($("#inputClaseEspecie").val(""));
+            ($("#inputPaisEspecie").val(""));
+            ($("#inputNombreComercialEspecie").val(""));
+            ($("#inputProcesamientoEspecie").val(""));
+            ($("#inputEmpaqueEspecie").val(""));
+            ($("#inputPorcionEspecie").val(""));
+            ($("#inputDistribucionEspecie").val(""));
+            ($("#inputHabitadEspecie").val(""));
+            ($("#inputTallaEspecie").val(""));
+            ($("#inputUsoEspecie").val(""));
+            ($("#inputPreparacionEspecie").val(""));
+        } 
+        
+         /** Combo**/
+        function comboFamilia(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_f",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmbof").html(elemento);                                                    
+            });
+        }                
+        
+        function comboOrden(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_o",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmboorden").html(elemento);                                                    
+            });
+        }   
+        
+        function comboClase(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_c",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmboClase").html(elemento);                                                    
+            });
+        }
+        
+        function comboPais(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_p",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmbopais").html(elemento);                                                    
+            });
+        }   
+        
+        function comboProcesamiento(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_pro",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmboProcesamiento").html(elemento);                                                    
+            });
+        }   
+        
+        function comboEmpaque(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_e",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmboEmpaque").html(elemento);                                                    
+            });
+        }   
+        
+        function comboPorcion(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_por",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmboPorcion").html(elemento);                                                    
+            });
+        }   
+        
+        function comboUso(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_u",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmboUso").html(elemento);                                                    
+            });
+        }   
+        
+        function comboPreparacion(){
+            $.ajax({
+                type:"GET",
+                url:"bd_peces/especie/combo_pre",
+                dataType:"text"
+            }).done(function(elemento){      
+                $("#conmboPreparacion").html(elemento);                                                    
+            });
+        }   
+    </script>
+
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery_1.js" type="text/javascript"></script>
+    <script src="js/jquery-2.1.1.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.js"></script>
+
+    <!-- Javascripts
+    ================================================== -->
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    </body>
+</html>
